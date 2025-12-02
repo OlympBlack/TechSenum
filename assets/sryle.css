@@ -1,0 +1,126 @@
+    :root {
+      --rose: #ff4fa3;
+      --rose-dark: #e03d8b;
+      --bg-light-rose: #fff0f7;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #fafafa;
+    }
+
+    /* Bouton rose */
+    .btn-rose {
+      background-color: var(--rose);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      color: white;
+    }
+    .btn-rose:hover {
+      background-color: var(--rose-dark);
+    }
+
+    /* Programme cards */
+    .programme-card {
+      border-radius: 20px;
+      background-color: var(--bg-light-rose);
+      border: 2px solid var(--rose);
+      padding: 25px;
+      transition: transform .2s ease;
+    }
+    .programme-card:hover {
+      transform: scale(1.03);
+    }
+
+    /* Focus form */
+    .form-control:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 .25rem rgba(255, 79, 163, .25);
+    }
+
+    footer {
+      background-color: var(--rose-dark);
+      color: white;
+      padding: 20px 0;
+    }
+
+    /* Réduction de la vidéo */
+    .small-video {
+      max-width: 700px;
+      margin: auto;
+    }
+    .small-video .ratio {
+      height: 280px; /* plus petit qu'une vidéo normale */
+    }
+
+    /* Zone scrollable */
+  .gallery-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 3rem; /* laisse de la place aux boutons */
+  }
+
+  .gallery-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Boutons gauche/droite */
+  .gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--rose);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .gallery-btn:hover {
+    opacity: .85;
+  }
+
+  .gallery-btn.left {
+    left: 10px;
+  }
+
+  .gallery-btn.right {
+    right: 10px;
+  }
+
+
+  .nav-enhanced {
+transition: box-shadow .3s ease, padding .3s ease;
+}
+.nav-enhanced.scrolled {
+box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+padding: 10px 0 !important;
+}
+.nav-hover {
+position: relative;
+}
+.nav-hover::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -2px;
+width: 0;
+height: 2px;
+background-color: var(--rose);
+transition: width .3s;
+}
+.nav-hover:hover::after {
+width: 100%;
+}
